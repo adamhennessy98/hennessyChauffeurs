@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About Me - Hennessy Chauffeurs" description="Learn about our experienced chauffeur service and commitment to premium transportation in Leinster.">
+  <!-- About Me Page Content -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        About Me
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600">
+        Dedicated to providing premium chauffeur services in Leinster
+      </p>
+    </div>
+
+    <!-- About content can be added here -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Text Content -->
+      <div class="prose max-w-none">
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Welcome to Hennessy Chauffeurs. With years of experience in the transportation industry, 
+          I am committed to providing exceptional chauffeur services throughout Leinster.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          My dedication to professionalism, punctuality, and customer satisfaction has made me 
+          a trusted choice for business executives, special events, and airport transfers.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          My dedication to professionalism, punctuality, and customer satisfaction has made me 
+          a trusted choice for business executives, special events, and airport transfers.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Whether you need reliable airport transportation, executive travel for business meetings, 
+          or luxury transport for special occasions, I ensure every journey is comfortable, 
+          safe, and professionally managed.
+        </p>
+        
+        <!-- Contact Me Button -->
+        <div class="mt-8">
+          <a href="/contact" class="inline-block rounded-xl px-12 py-3 bg-black text-white hover:opacity-90 hover:scale-105 transition-all duration-300 text-sm font-medium">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="lg:order-first">
+        <img src="/aboutme.jpg" alt="About Hennessy Chauffeurs" class="w-full h-auto rounded-lg shadow-lg object-cover" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

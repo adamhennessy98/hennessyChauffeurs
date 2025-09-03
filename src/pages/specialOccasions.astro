@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Special Occasions - Hennessy Chauffeurs" description="Luxury transport for weddings, events and special occasions in Leinster. Premium chauffeur service for your special day.">
+  <!-- Special Occasions Page Content -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Special Occasions
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600">
+        Luxury transport for weddings and special events
+      </p>
+    </div>
+
+    <!-- Service Details -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Content -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-6">Make Your Special Day Perfect</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Celebrate your special moments with our luxury chauffeur service. From weddings 
+          to anniversaries, we ensure your transportation is as memorable as your occasion.
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-4">Special Occasion Services:</h3>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start">
+            <span class="text-black mr-2">✓</span>
+            <span>Wedding transportation</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-black mr-2">✓</span>
+            <span>Special event transfers</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-black mr-2">✓</span>
+            <span>Group bookings available</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-black mr-2">✓</span>
+            <span>Luxury vehicles with decorations</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-black mr-2">✓</span>
+            <span>Red carpet service</span>
+          </li>
+        </ul>
+
+        <div class="bg-gray-100 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-semibold mb-2">From €100</h3>
+          <p class="text-gray-600">Luxury packages for your special occasions</p>
+        </div>
+
+        <!-- Contact Button -->
+        <div class="mt-8">
+          <a href="/contact" class="inline-block rounded-xl px-12 py-3 bg-black text-white hover:opacity-90 hover:scale-105 transition-all duration-300 text-sm font-medium">
+            Book Special Occasion
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <img src="/serviceImage3.jpg" alt="Special Occasions Service" class="w-full h-auto rounded-lg shadow-lg object-cover" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
