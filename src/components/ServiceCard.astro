@@ -10,7 +10,7 @@ export interface Props {
 const { title, description, imageUrl, imageAlt, linkUrl } = Astro.props;
 ---
 
-<div class="bg-gray-200 rounded-lg p-6 text-center h-96 flex flex-col">
+<div class="bg-gray-200 rounded-lg p-6 text-center h-96 flex flex-col hover:scale-105 transition-transform duration-300">
   <div class="h-48 rounded-lg mb-4 overflow-hidden">
     <img src={imageUrl} alt={imageAlt} class="w-full h-full object-cover" />
   </div>

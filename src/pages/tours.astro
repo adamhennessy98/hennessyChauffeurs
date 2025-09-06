@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Tours - Hennessy Chauffeurs" description="Explore Leinster with our premium tour services. Custom chauffeur-driven tours and sightseeing experiences.">
+  <!-- Hero Section with Background Image -->
+  <div class="w-full h-80 md:h-105 lg:h-126 overflow-hidden relative">
+    <img src="/countrySide.png" alt="Irish Countryside" class="w-full h-full object-cover filter brightness-90 contrast-110 blur-sm" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
+    <div class="absolute inset-0 bg-black/20"></div>
+    
+    <!-- Hero Text Overlay -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center px-4 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
+          Discover Ireland with Our Premium Tours
+        </h1>
+        <p class="text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-lg">
+          Explore the breathtaking beauty and rich heritage of Ireland with Hennessy Chauffeurs' exclusive tour services. 
+          From the rolling green hills of the countryside to historic castles and vibrant cities, we offer carefully curated 
+          tours that showcase the very best of what Ireland has to offer.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tours Page Content -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+
+    <!-- Tour Options -->
+    <div class="space-y-8">
+      <!-- Tour 1: Wild Atlantic Way -->
+      <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Wild Atlantic Way Coastal Tour</h2>
+            <p class="text-gray-600 mb-4">
+              Experience Ireland's dramatic western coastline with stunning cliffs, pristine beaches, and charming coastal villages. 
+              This full-day tour includes stops at the Cliffs of Moher, Dingle Peninsula, and traditional Irish fishing villages.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">8-10 hours</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Scenic Routes</span>
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Photo Stops</span>
+            </div>
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8 flex flex-col gap-3">
+            <button class="border-2 border-gray-400 text-gray-700 font-bold px-8 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+              More Info
+            </button>
+            <button class="bg-black text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
+              Book This Tour
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 2: Ancient Ireland -->
+      <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Ancient Ireland Heritage Tour</h2>
+            <p class="text-gray-600 mb-4">
+              Journey through Ireland's rich history with visits to ancient castles, megalithic tombs, and medieval monasteries. 
+              Discover Newgrange, Kilkenny Castle, and the Rock of Cashel with expert commentary on Irish heritage.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">6-8 hours</span>
+              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Historical Sites</span>
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Castle Visits</span>
+            </div>
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8 flex flex-col gap-3">
+            <button class="border-2 border-gray-400 text-gray-700 font-bold px-8 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+              More Info
+            </button>
+            <button class="bg-black text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
+              Book This Tour
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 3: Dublin Highlights -->
+      <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Dublin City & Surroundings Tour</h2>
+            <p class="text-gray-600 mb-4">
+              Explore Ireland's vibrant capital and its beautiful surroundings. Visit Trinity College, Dublin Castle, 
+              Temple Bar, and venture to the scenic Wicklow Mountains known as the "Garden of Ireland."
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">5-7 hours</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">City Highlights</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Mountain Views</span>
+            </div>
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-8 flex flex-col gap-3">
+            <button class="border-2 border-gray-400 text-gray-700 font-bold px-8 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+              More Info
+            </button>
+            <button class="bg-black text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
+              Book This Tour
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Tour Option -->
+      <div class="bg-gradient-to-r from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-8 hover:border-gray-400 hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-white text-2xl">✨</span>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Create Your Custom Tour</h2>
+          <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Have specific places you'd like to visit? Want to explore your family heritage or follow a particular interest? 
+            Let us design a completely personalized tour experience just for you. Share your ideas with us and we'll create 
+            an itinerary that perfectly matches your preferences, schedule, and budget.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:info@hennessychauffeurs.ie?subject=Custom Tour Request" class="bg-black text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
+              Email Tour Request
+            </a>
+            <a href="/contact" class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
