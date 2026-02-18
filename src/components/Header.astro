@@ -8,12 +8,12 @@
     <a href="/" class="font-semibold tracking-tight text-lg">Hennessy Chauffeurs</a>
 
     <!-- Nav links -->
-    <nav class="hidden md:flex gap-8 text-sm font-semibold">
-      <a href="/" class="hover:text-neutral-600">Home</a>
-      <a href="/airportTransfers" class="hover:text-neutral-600">Airport Transfers</a>
-      <a href="/businessTravel" class="hover:text-neutral-600">Business Travel</a>
-      <a href="/specialOccasions" class="hover:text-neutral-600">Special Occasions</a>
-      <a href="/tours" class="hover:text-neutral-600">Tours</a>
+    <nav class="hidden md:flex gap-8 text-sm font-semibold" id="main-nav">
+      <a href="/" class="hover:text-neutral-600" data-page-index="0">Home</a>
+      <a href="/airportTransfers" class="hover:text-neutral-600" data-page-index="1">Airport Transfers</a>
+      <a href="/businessTravel" class="hover:text-neutral-600" data-page-index="2">Business Travel</a>
+      <a href="/specialOccasions" class="hover:text-neutral-600" data-page-index="3">Special Occasions</a>
+      <a href="/tours" class="hover:text-neutral-600" data-page-index="4">Tours</a>
     </nav>
 
     <!-- CTA -->
@@ -23,3 +23,72 @@
     </div>
   </div>
 </header>
+
+<script>
+  // Page order mapping for slide direction detection
+  const pageOrder = {
+    '/': 0,
+    '/airportTransfers': 1,
+    '/businessTravel': 2,
+    '/specialOccasions': 3,
+    '/tours': 4,
+    '/aboutMe': 5,
+    '/contact': 6
+  };
+
+  let currentPageIndex = pageOrder[window.location.pathname] || 0;
+
+  // Function to determine slide direction
+  function getSlideDirection(fromIndex, toIndex) {
+    return fromIndex > toIndex ? 'left' : 'right';
+  }
+
+  // Add click handlers to navigation links
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('#main-nav a[data-page-index]');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetIndex = parseInt(this.getAttribute('data-page-index'));
+        const direction = getSlideDirection(currentPageIndex, targetIndex);
+        
+        // Store direction for the transition
+        document.documentElement.setAttribute('data-slide-direction', direction);
+        
+        // Update current page index
+        currentPageIndex = targetIndex;
+      });
+    });
+  });
+
+  // Handle browser back/forward navigation
+  window.addEventListener('popstate', function() {
+    const newPageIndex = pageOrder[window.location.pathname] || 0;
+    const direction = getSlideDirection(currentPageIndex, newPageIndex);
+    
+    document.documentElement.setAttribute('data-slide-direction', direction);
+    currentPageIndex = newPageIndex;
+  });
+
+  // Listen for Astro's view transition events
+  document.addEventListener('astro:before-preparation', function() {
+    const direction = document.documentElement.getAttribute('data-slide-direction') || 'right';
+    
+    // Apply direction-specific CSS
+    if (direction === 'left') {
+      document.documentElement.style.setProperty('--slide-out-transform', 'translateX(30px)');
+      document.documentElement.style.setProperty('--slide-in-transform', 'translateX(-30px)');
+    } else {
+      document.documentElement.style.setProperty('--slide-out-transform', 'translateX(-30px)');
+      document.documentElement.style.setProperty('--slide-in-transform', 'translateX(30px)');
+    }
+  });
+</script>
+
+<style>
+  /* Enhanced transitions with CSS variables */
+  :root {
+    --slide-out-transform: translateX(-30px);
+    --slide-in-transform: translateX(30px);
+  }
+</style>
