@@ -14,7 +14,7 @@ export const services: Service[] = [
     id: 'airport',
     title: 'Airport Transfers',
     description: 'Professional airport pickup and drop-off services',
-    imageUrl: '/serviceImage1.jpg',
+    imageUrl: '/serviceImage1.webp',
     imageAlt: 'Airport Transfer Service',
     linkUrl: '/services#airport',
     features: [
@@ -30,7 +30,7 @@ export const services: Service[] = [
     id: 'business',
     title: 'Business Travel',
     description: 'Executive transportation for business meetings',
-    imageUrl: '/serviceImage2.jpg',
+    imageUrl: '/serviceImage2.webp',
     imageAlt: 'Business Travel Service',
     linkUrl: '/services#business',
     features: [
@@ -46,7 +46,7 @@ export const services: Service[] = [
     id: 'occasions',
     title: 'Special Occasions',
     description: 'Luxury transport for weddings and events',
-    imageUrl: '/serviceImage3.jpg',
+    imageUrl: '/serviceImage3.webp',
     imageAlt: 'Special Occasions Service',
     linkUrl: '/services#occasions',
     features: [
