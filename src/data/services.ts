@@ -15,8 +15,8 @@ export const services: Service[] = [
     title: 'Airport Transfers',
     description: 'Professional airport pickup and drop-off services',
     imageUrl: '/serviceImage1.webp',
-    imageAlt: 'Airport Transfer Service',
-    linkUrl: '/services#airport',
+    imageAlt: 'Professional chauffeur awaiting client at Dublin Airport arrivals - Hennessy Chauffeurs',
+    linkUrl: '/airportTransfers',
     features: [
       'Dublin Airport transfers',
       'Cork Airport transfers', 
@@ -31,8 +31,8 @@ export const services: Service[] = [
     title: 'Business Travel',
     description: 'Executive transportation for business meetings',
     imageUrl: '/serviceImage2.webp',
-    imageAlt: 'Business Travel Service',
-    linkUrl: '/services#business',
+    imageAlt: 'Executive chauffeur car for business travel in Leinster - Hennessy Chauffeurs',
+    linkUrl: '/businessTravel',
     features: [
       'Corporate accounts',
       'Executive vehicles',
@@ -47,8 +47,8 @@ export const services: Service[] = [
     title: 'Special Occasions',
     description: 'Luxury transport for weddings and events',
     imageUrl: '/serviceImage3.webp',
-    imageAlt: 'Special Occasions Service',
-    linkUrl: '/services#occasions',
+    imageAlt: 'Luxury wedding and event chauffeur car in Leinster - Hennessy Chauffeurs',
+    linkUrl: '/specialOccasions',
     features: [
       'Wedding transport',
       'Event transfers',
