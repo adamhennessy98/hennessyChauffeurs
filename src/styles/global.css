@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+/* Brand palette: navy, mint, gold, lavender, teal */
+@theme {
+  --color-navy: #2d3047;
+  --color-mint: #dae7e7;
+  --color-gold: #e0ca3c;
+  --color-lavender: #ada0bb;
+  --color-teal: #048a81;
+  --font-display: "Playfair Display", serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}

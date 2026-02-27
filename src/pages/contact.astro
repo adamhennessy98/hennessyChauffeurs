@@ -2,76 +2,80 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact Hennessy Chauffeurs | Book a Chauffeur in Leinster, Ireland" description="Contact Hennessy Chauffeurs for a free quote. Call +353 85 131 5392 or fill out our form. Premium chauffeur hire in Leinster for airports, business & events.">
+<BaseLayout
+  title="Contact Hennessy Chauffeurs | Book a Chauffeur in Leinster, Ireland"
+  description="Contact Hennessy Chauffeurs for a free quote. Call +353 85 131 5392 or fill out our form. Premium chauffeur hire in Leinster for airports, business & events."
+  breadcrumb={[{ name: 'Home', url: 'https://hennessychauffeurs.ie' }, { name: 'Contact' }]}
+>
   <!-- Contact Page Content -->
   <section class="relative min-h-screen">
     <!-- Background Image with Blur -->
     <div class="absolute inset-0 z-0">
-      <img src="/contactMe.webp" alt="Contact Background" class="w-full h-full object-cover filter blur-[2px] brightness-50" />
-      <div class="absolute inset-0 bg-black/30"></div>
+      <img src="/contactMe.webp" alt="Contact Hennessy Chauffeurs - premium chauffeur service Leinster" class="w-full h-full object-cover filter blur-[2px] brightness-50" />
+      <div class="absolute inset-0 bg-navy/40"></div>
     </div>
     
     <!-- Content Overlay -->
     <div class="relative z-10 max-w-4xl mx-auto px-4 py-16">
       <div class="text-center mb-12">
-        <h1 class="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-2xl">
+        <h1 class="font-display text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-2xl tracking-wide">
           Contact Us
         </h1>
-        <p class="text-lg md:text-xl text-white/90 drop-shadow-lg">
+        <p class="text-lg md:text-xl text-mint drop-shadow-lg">
           Get in touch or request a quote for premium chauffeur services in Leinster
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- Contact Information -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-2xl">
-          <h2 class="text-2xl font-semibold mb-6 text-gray-900">Get In Touch</h2>
+        <div class="bg-mint/95 backdrop-blur-sm rounded-lg p-8 shadow-2xl border border-lavender/30">
+          <h2 class="font-display text-2xl font-semibold mb-6 text-navy">Get In Touch</h2>
           <div class="space-y-4">
             <div class="flex items-center">
-              <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+              <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mr-4">
                 <img src="/phone.svg" alt="Phone Icon" class="w-6 h-6 filter invert" />
               </div>
               <div>
-                <p class="font-semibold">Phone</p>
-                <a href="tel:+353851315392" class="text-gray-600 hover:text-black">+353 85 131 5392</a>
+                <p class="font-semibold text-navy">Phone</p>
+                <a href="tel:+353851315392" class="text-teal hover:text-gold transition-colors duration-200">+353 85 131 5392</a>
               </div>
             </div>
             
             <div class="flex items-center">
-              <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+              <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mr-4">
                 <img src="/email.svg" alt="Email Icon" class="w-6 h-6 filter invert" />
               </div>
               <div>
-                <p class="font-semibold">Email</p>
-                <a href="mailto:info@hennessychauffeurs.ie" class="text-gray-600 hover:text-black">info@hennessychauffeurs.ie</a>
+                <p class="font-semibold text-navy">Email</p>
+                <a href="mailto:info@hennessychauffeurs.ie" class="text-teal hover:text-gold transition-colors duration-200">info@hennessychauffeurs.ie</a>
               </div>
             </div>
             
             <div class="flex items-center">
-              <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+              <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mr-4">
                 <img src="/location.svg" alt="Location Icon" class="w-6 h-6 filter invert" />
               </div>
               <div>
-                <p class="font-semibold">Location</p>
-                <p class="text-gray-600">Leinster, Ireland</p>
+                <p class="font-semibold text-navy">Location</p>
+                <p class="text-navy/80">Leinster, Ireland</p>
               </div>
             </div>
             
             <div class="flex items-center">
-              <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+              <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mr-4">
                 <img src="/clock.svg" alt="Clock Icon" class="w-6 h-6 filter invert" />
               </div>
               <div>
-                <p class="font-semibold">Availability</p>
-                <p class="text-gray-600">24/7 Service Available</p>
+                <p class="font-semibold text-navy">Availability</p>
+                <p class="text-navy/80">24/7 Service Available</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Contact Form -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-2xl">
-          <h2 class="text-2xl font-semibold mb-6 text-gray-900">Request a quote</h2>
+        <div class="bg-mint/95 backdrop-blur-sm rounded-lg p-8 shadow-2xl border border-lavender/30">
+          <h2 class="font-display text-2xl font-semibold mb-6 text-navy">Request a quote</h2>
           <form action="https://formspree.io/f/xovpnnoj" method="POST" class="space-y-4">
             <!-- Hidden Formspree fields -->
             <input type="hidden" name="_subject" value="New booking request – Hennessy Chauffeurs" />
@@ -79,45 +83,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <input type="hidden" name="_next" value="https://hennessy-chauffeurs.vercel.app/thank-you" />
 
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+              <label for="name" class="block text-sm font-medium text-navy mb-1">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
             </div>
             
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+              <label for="email" class="block text-sm font-medium text-navy mb-1">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
             </div>
             
             <div>
-              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-              <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+              <label for="phone" class="block text-sm font-medium text-navy mb-1">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Date</label>
-                <input type="date" id="date" name="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+                <label for="date" class="block text-sm font-medium text-navy mb-1">Date</label>
+                <input type="date" id="date" name="date" class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
               </div>
               
               <div>
-                <label for="time" class="block text-sm font-medium text-gray-700 mb-1">Time</label>
-                <input type="time" id="time" name="time" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+                <label for="time" class="block text-sm font-medium text-navy mb-1">Time</label>
+                <input type="time" id="time" name="time" class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
               </div>
             </div>
             
             <div>
-              <label for="from" class="block text-sm font-medium text-gray-700 mb-1">Pick-up Location</label>
-              <input type="text" id="from" name="from" placeholder="Where should we pick you up?" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+              <label for="from" class="block text-sm font-medium text-navy mb-1">Pick-up Location</label>
+              <input type="text" id="from" name="from" placeholder="Where should we pick you up?" class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
             </div>
             
             <div>
-              <label for="to" class="block text-sm font-medium text-gray-700 mb-1">Destination</label>
-              <input type="text" id="to" name="to" placeholder="Where are you going?" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+              <label for="to" class="block text-sm font-medium text-navy mb-1">Destination</label>
+              <input type="text" id="to" name="to" placeholder="Where are you going?" class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
             </div>
             
             <div>
-              <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Required</label>
-              <select id="service" name="service" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90">
+              <label for="service" class="block text-sm font-medium text-navy mb-1">Service Required</label>
+              <select id="service" name="service" class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90">
                 <option value="">Select a service</option>
                 <option value="airport">Airport Transfer</option>
                 <option value="business">Business Travel</option>
@@ -128,11 +132,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             
             <div>
-              <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Additional Notes</label>
-              <textarea id="notes" name="notes" rows="4" placeholder="Any special requirements or additional information..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-white/90"></textarea>
+              <label for="notes" class="block text-sm font-medium text-navy mb-1">Additional Notes</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Any special requirements or additional information..." class="w-full px-3 py-2 border border-lavender/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal bg-white/90"></textarea>
             </div>
             
-            <button type="submit" class="w-full bg-black text-white py-3 px-4 rounded-lg hover:opacity-90 transition-opacity">
+            <button type="submit" class="w-full bg-gold text-navy font-medium py-3 px-4 rounded-lg hover:bg-gold/90 transition-colors duration-200">
               Send Booking Request
             </button>
           </form>
