@@ -50,54 +50,145 @@ const benefits = [
     </div>
   </section>
 
-  <!-- Benefits Section -->
+  <!-- Why Choose Hennessy Chauffeurs -->
   <section class="max-w-6xl mx-auto px-4 py-16">
-    <header class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold text-navy tracking-wide mb-3">Why Choose Hennessy Chauffeurs</h2>
-      <p class="text-lg text-lavender max-w-2xl mx-auto">Professional, reliable, and tailored to how you travel.</p>
-      <div class="w-16 h-0.5 bg-gold mx-auto mt-6" aria-hidden="true"></div>
-    </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-      {benefits.map((item) => (
-        <div class="flex gap-4 items-start">
-          <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center text-teal" aria-hidden="true">
-            {item.icon === 'clock' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            )}
-            {item.icon === 'shield' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            )}
-            {item.icon === 'car' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-8 4h8m-5 8v-4a1 1 0 00-1-1h-4a1 1 0 00-1 1v4M7 7v6m10-6v6"/></svg>
-            )}
-            {item.icon === 'briefcase' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            )}
-            {item.icon === 'availability' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            )}
-            {item.icon === 'plane' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-            )}
-            {item.icon === 'handshake' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
-            )}
-            {item.icon === 'door' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-            )}
-            {item.icon === 'check' && (
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            )}
-          </div>
-          <p class="text-navy/90 leading-relaxed pt-0.5">{item.text}</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">Why Choose Hennessy Chauffeurs</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Professional drivers</h3>
+          <p class="text-gray-600 text-sm">Experienced, courteous and fully licensed chauffeurs who prioritise your comfort and punctuality.</p>
         </div>
-      ))}
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Premium fleet</h3>
+          <p class="text-gray-600 text-sm">Well-maintained luxury vehicles for a comfortable, stylish journey every time.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Punctual & reliable</h3>
+          <p class="text-gray-600 text-sm">We track flights and traffic so you are met on time and reach your destination without stress.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9a9 9 0 009 9m-9-9a9 9 0 009-9m9 9h-9m-9-9a9 9 0 019-9" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Discreet service</h3>
+          <p class="text-gray-600 text-sm">Confidential, professional transport for business and personal travel across Leinster.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Leinster-wide coverage</h3>
+          <p class="text-gray-600 text-sm">Airport transfers, city trips and long-distance journeys throughout the province.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">24/7 availability</h3>
+          <p class="text-gray-600 text-sm">Early morning pickups, late-night returns and last-minute bookings when you need them.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Transparent pricing</h3>
+          <p class="text-gray-600 text-sm">Clear, upfront quotes with no hidden fees so you know exactly what you're paying.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Meet & greet</h3>
+          <p class="text-gray-600 text-sm">Airport meet-and-greet service so you are welcomed as soon as you land.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+        </span>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-1">Flexible booking</h3>
+          <p class="text-gray-600 text-sm">Hourly, point-to-point or as-directed bookings to suit your schedule.</p>
+        </div>
+      </div>
     </div>
-    <div class="w-16 h-0.5 bg-lavender/40 mx-auto mt-12" aria-hidden="true"></div>
-    <div class="text-center mt-8">
-      <a href="/contact" class="inline-block bg-gold text-navy font-medium px-8 py-3 rounded-lg hover:bg-gold/90 transition-colors duration-200">
+    <div class="border-t border-gray-200 mt-12 pt-10 text-center">
+      <a href="/contact" class="inline-block bg-black text-white px-8 py-3 rounded-xl hover:opacity-90 transition-opacity">
         Book Your Journey
       </a>
+    </div>
+  </section>
+
+  <!-- As Directed Chauffeur Service -->
+  <section id="directed_chauffeur" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">As Directed Chauffeur Service</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Book our flexible hourly chauffeur service for meetings, events and appointments across Leinster. 
+          Your driver is at your direction—whether you need multiple stops, waiting time or a full day of transport, we adapt to your schedule with discretion and professionalism.
+        </p>
+      </div>
+      <div class="order-first lg:order-none">
+        <img 
+          src="/as-directed-service.png" 
+          alt="Businessman seated in rear of luxury vehicle" 
+          class="w-full rounded-xl object-cover shadow-md"
+          width="800"
+          height="533"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Chauffeur Service -->
+  <section id="luxury_chauffeur" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <img 
+          src="/luxury-chauffeur-service.png" 
+          alt="Chauffeur standing beside luxury vehicle in city setting" 
+          class="w-full rounded-xl object-cover shadow-md"
+          width="800"
+          height="533"
+        />
+      </div>
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Luxury Chauffeur Service</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Premium chauffeur transport for business and leisure clients. We combine reliability, professionalism and comfort so every journey meets the highest standards.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          From executive travel to special occasions, our experienced drivers and well-maintained fleet ensure you arrive in style. Book your journey with Hennessy Chauffeurs.
+        </p>
+        <a href="/contact" class="inline-block bg-black text-white px-8 py-3 rounded-xl hover:opacity-90 transition-opacity">
+          Book Now
+        </a>
+      </div>
     </div>
   </section>
 
