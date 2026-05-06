@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Airport transfer placeholder">
+  <rect width="900" height="900" fill="#191a1a" />
+  <path d="M120 640 L780 260" stroke="#9d9da2" stroke-width="12" opacity="0.6" />
+  <path d="M240 680 L840 520" stroke="#c6c6c7" stroke-width="8" opacity="0.5" />
+  <text x="450" y="470" text-anchor="middle" fill="#e7e5e5" font-family="Inter, Arial, sans-serif" font-size="42">Airport Transfer Image</text>
+</svg>

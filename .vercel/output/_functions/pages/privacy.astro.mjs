@@ -1,0 +1,42 @@
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_Df0-Ugd6.mjs';
+import 'kleur/colors';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_C-tuGI7x.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Privacy = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Privacy Policy | Hennessy Chauffeurs", "description": "Privacy policy for Hennessy Chauffeurs. How we collect, use and protect your personal data when you use our chauffeur services in Leinster, Ireland.", "breadcrumb": [{ name: "Home", url: "https://hennessychauffeurs.ie" }, { name: "Privacy Policy" }] }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="max-w-4xl mx-auto px-4 py-16"> <div class="text-center mb-12"> <h1 class="font-display text-3xl md:text-4xl font-bold text-navy mb-6 tracking-wide">
+Privacy Policy
+</h1> <p class="text-lg md:text-xl text-lavender">
+How we handle your personal information
+</p> </div> <div class="prose max-w-none text-navy/90"> <p class="text-lg leading-relaxed mb-6">
+Hennessy Chauffeurs ("we", "us", "our") is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal data when you use our chauffeur services or contact us through our website.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Information we collect</h2> <p class="leading-relaxed mb-4">
+We may collect your name, email address, phone number, pick-up and destination addresses, travel dates and times, and any other details you provide when making a booking or enquiry.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">How we use your information</h2> <p class="leading-relaxed mb-4">
+We use your information to process bookings, communicate with you about your journey, improve our services, and comply with legal obligations. We do not sell your data to third parties.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Data retention and security</h2> <p class="leading-relaxed mb-4">
+We retain your data only for as long as necessary to fulfil the purposes above or as required by law. We take appropriate technical and organisational measures to protect your personal data.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Your rights</h2> <p class="leading-relaxed mb-4">
+Under applicable data protection law (including GDPR), you have rights to access, rectify, erase, restrict processing, and object to processing of your personal data. You may also have the right to data portability and to lodge a complaint with a supervisory authority.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Contact</h2> <p class="leading-relaxed mb-8">
+For any questions about this privacy policy or your personal data, contact us at <a href="mailto:info@hennessychauffeurs.ie" class="text-teal font-medium hover:text-gold transition-colors duration-200">info@hennessychauffeurs.ie</a> or call <a href="tel:+353851315392" class="text-teal font-medium hover:text-gold transition-colors duration-200">+353 85 131 5392</a>.
+</p> <p class="text-sm text-lavender">
+Last updated: February 2025. We may update this policy from time to time; the current version will always be available on this page.
+</p> <div class="mt-8"> <a href="/contact" class="inline-block rounded-lg px-8 py-3 bg-gold text-navy font-medium hover:bg-gold/90 transition-colors duration-200 text-sm">
+Contact Us
+</a> </div> </div> </section> ` })}`;
+}, "C:/dev/projects/web-apps/Hennessy-chauffeurs/hennessy-chauffeurs/src/pages/privacy.astro", void 0);
+
+const $$file = "C:/dev/projects/web-apps/Hennessy-chauffeurs/hennessy-chauffeurs/src/pages/privacy.astro";
+const $$url = "/privacy";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Privacy,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

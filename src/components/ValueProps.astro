@@ -1,0 +1,41 @@
+---
+const items = [
+  {
+    icon: 'person_pin',
+    title: 'Solo Driver Experience',
+    description:
+      'Work directly with your dedicated chauffeur. A personalized, consistent service where your preferences are remembered every time.',
+  },
+  {
+    icon: 'directions_car',
+    title: 'Modern Fleet',
+    description:
+      'Our fleet, led by the Mercedes E220d, is meticulously maintained to the highest standards of safety, cleanliness, and comfort.',
+  },
+  {
+    icon: 'map',
+    title: 'Nationwide Coverage',
+    description:
+      'Based in Dublin, serving all 32 counties. Whether it is a cross-country transfer or a local trip, we go wherever you need us.',
+  },
+];
+---
+
+<section class="bg-surface-container-low py-32">
+  <div class="mx-auto max-w-7xl px-8">
+    <header class="mb-16 text-center">
+      <h2 class="mb-6 font-headline text-4xl text-on-surface md:text-5xl">The Hennessy Chauffeur Difference</h2>
+      <div class="mx-auto h-px w-24 bg-primary opacity-30"></div>
+    </header>
+
+    <div class="grid grid-cols-1 gap-16 md:grid-cols-3">
+      {items.map((item) => (
+        <article>
+          <span class="material-symbols-outlined text-4xl text-primary"> {item.icon} </span>
+          <h3 class="mb-4 mt-4 font-headline text-xl text-on-surface">{item.title}</h3>
+          <p class="leading-relaxed text-on-surface-variant">{item.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

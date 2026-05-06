@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import vercel from '@astrojs/vercel';
 
 const site = 'https://hennessychauffeurs.ie';
 
@@ -11,10 +12,13 @@ function sitemapSerialize(item) {
   if (path === '/') {
     return { ...item, priority: 1.0 };
   }
-  if (['/airportTransfers', '/businessTravel', '/specialOccasions', '/tours'].includes(path)) {
+  if (['/airportTransfers', '/businessTravel', '/specialOccasions', '/blog'].includes(path)) {
     return { ...item, priority: 0.8 };
   }
   if (['/aboutMe', '/contact'].includes(path)) {
+    return { ...item, priority: 0.7 };
+  }
+  if (path.startsWith('/blog/')) {
     return { ...item, priority: 0.7 };
   }
   if (['/privacy', '/terms', '/cookies'].includes(path)) {
@@ -26,6 +30,8 @@ function sitemapSerialize(item) {
 // https://astro.build/config
 export default defineConfig({
   site,
+  output: 'server',
+  adapter: vercel(),
   integrations: [
     sitemap({
       changefreq: 'weekly',

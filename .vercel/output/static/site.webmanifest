@@ -1,0 +1,17 @@
+{
+  "name": "Hennessy Chauffeurs",
+  "short_name": "Hennessy Chauffeurs",
+  "description": "Premium chauffeur services in Leinster, Ireland. Airport transfers, business travel, special occasions and tours.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2D3047",
+  "background_color": "#2D3047",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

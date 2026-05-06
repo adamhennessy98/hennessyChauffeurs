@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-label="Ireland tours placeholder">
+  <rect width="900" height="500" fill="#1f2020" />
+  <path d="M0 360 C120 320, 240 390, 360 340 C500 285, 620 370, 900 300 L900 500 L0 500 Z" fill="#454747" />
+  <text x="450" y="250" text-anchor="middle" fill="#e7e5e5" font-family="Inter, Arial, sans-serif" font-size="36">Bespoke Tours Image</text>
+</svg>

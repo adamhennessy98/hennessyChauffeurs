@@ -1,0 +1,44 @@
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_Df0-Ugd6.mjs';
+import 'kleur/colors';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_C-tuGI7x.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Terms = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Terms of Service | Hennessy Chauffeurs", "description": "Terms of service for Hennessy Chauffeurs. Booking conditions, cancellation policy and terms of use for our chauffeur services in Leinster, Ireland.", "breadcrumb": [{ name: "Home", url: "https://hennessychauffeurs.ie" }, { name: "Terms of Service" }] }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="max-w-4xl mx-auto px-4 py-16"> <div class="text-center mb-12"> <h1 class="font-display text-3xl md:text-4xl font-bold text-navy mb-6 tracking-wide">
+Terms of Service
+</h1> <p class="text-lg md:text-xl text-lavender">
+Booking conditions and terms of use
+</p> </div> <div class="prose max-w-none text-navy/90"> <p class="text-lg leading-relaxed mb-6">
+These terms apply when you book or use chauffeur services provided by Hennessy Chauffeurs ("we", "us", "our"). By making a booking or using our services, you agree to these terms.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Services</h2> <p class="leading-relaxed mb-4">
+We provide chauffeur-driven transportation services in Leinster, Ireland, including airport transfers, business travel, special occasions, and tours. Services are subject to availability and confirmation.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Bookings and payment</h2> <p class="leading-relaxed mb-4">
+A booking is confirmed only when we have accepted your request and confirmed the details and price. Payment terms will be communicated at the time of booking. Quotes may vary based on route, vehicle, and timing.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Cancellation and changes</h2> <p class="leading-relaxed mb-4">
+Cancellation and amendment policies will be set out in your booking confirmation. Please contact us as soon as possible if you need to cancel or change your booking.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Your responsibilities</h2> <p class="leading-relaxed mb-4">
+You are responsible for providing accurate pick-up and destination details, being ready at the agreed time and place, and ensuring your behaviour and belongings comply with applicable laws and our reasonable requirements.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Limitation of liability</h2> <p class="leading-relaxed mb-4">
+To the fullest extent permitted by law, our liability in connection with our services is limited to the amount paid for the relevant booking, except in cases of death or personal injury caused by our negligence or other liability that cannot be excluded by law.
+</p> <h2 class="font-display text-2xl font-semibold text-navy mt-8 mb-4">Contact</h2> <p class="leading-relaxed mb-8">
+For questions about these terms, contact us at <a href="mailto:info@hennessychauffeurs.ie" class="text-teal font-medium hover:text-gold transition-colors duration-200">info@hennessychauffeurs.ie</a> or <a href="tel:+353851315392" class="text-teal font-medium hover:text-gold transition-colors duration-200">+353 85 131 5392</a>.
+</p> <p class="text-sm text-lavender">
+Last updated: February 2025. We may update these terms; the current version will be available on this page.
+</p> <div class="mt-8"> <a href="/contact" class="inline-block rounded-lg px-8 py-3 bg-gold text-navy font-medium hover:bg-gold/90 transition-colors duration-200 text-sm">
+Contact Us
+</a> </div> </div> </section> ` })}`;
+}, "C:/dev/projects/web-apps/Hennessy-chauffeurs/hennessy-chauffeurs/src/pages/terms.astro", void 0);
+
+const $$file = "C:/dev/projects/web-apps/Hennessy-chauffeurs/hennessy-chauffeurs/src/pages/terms.astro";
+const $$url = "/terms";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Terms,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

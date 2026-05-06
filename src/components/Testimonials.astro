@@ -1,0 +1,38 @@
+---
+const testimonials = [
+  {
+    quote:
+      'The most professional service I have encountered in Dublin. Discrete, friendly, and the car was immaculate. Our chauffeur went above and beyond to ensure our multi-city tour was perfect.',
+    name: 'James Aristhor',
+    title: 'Global Logistics Director',
+    indented: false,
+  },
+  {
+    quote:
+      'Seamless airport transfers every time. Having one point of contact makes booking effortless. Truly the silent concierge of travel in Ireland.',
+    name: 'Sarah McAllister',
+    title: 'Private Client',
+    indented: true,
+  },
+];
+---
+
+<section class="relative mx-auto max-w-5xl overflow-hidden px-8 py-32">
+  <span class="material-symbols-outlined absolute -left-8 -top-12 text-8xl text-outline-variant/10">format_quote</span>
+  <div class="space-y-16">
+    {testimonials.map((item) => (
+      <article class:list={[item.indented ? 'md:ml-24' : '']}>
+        <blockquote class="mb-8 font-headline text-2xl italic leading-relaxed text-on-surface md:text-3xl">
+          &ldquo;{item.quote}&rdquo;
+        </blockquote>
+        <div class="flex items-center">
+          <div class="mr-6 h-px w-12 bg-primary"></div>
+          <div>
+            <p class="text-sm font-bold uppercase tracking-widest text-on-surface">{item.name}</p>
+            <p class="text-xs uppercase tracking-tighter text-on-surface-variant">{item.title}</p>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

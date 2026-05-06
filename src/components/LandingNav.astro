@@ -1,0 +1,57 @@
+---
+const pathname = Astro.url.pathname;
+const links = [
+  { label: 'Services', href: '/services' },
+  { label: 'Tours', href: '/tours' },
+  { label: 'About', href: '/aboutMe' },
+  { label: 'Blog', href: '/blog' },
+];
+---
+
+<header class="fixed top-0 z-50 w-full glass-nav shadow-[0_40px_60px_rgba(231,229,229,0.05)]">
+  <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 md:px-8 md:py-6">
+    <a href="/" class="font-headline text-xl font-bold uppercase tracking-[0.2em] text-on-surface">
+      Hennessy Chauffeurs
+    </a>
+
+    <nav class="hidden items-center gap-4 lg:gap-6 xl:gap-8 md:flex">
+      {links.map((link) => {
+        const isActive =
+          pathname === link.href || (link.href === '/blog' && pathname.startsWith('/blog'));
+        return (
+          <a
+            href={link.href}
+            class:list={[
+              'font-headline tracking-tight transition-colors duration-500',
+              isActive ? 'border-b border-primary/30 pb-1 text-primary' : 'text-on-surface-variant hover:text-on-surface',
+            ]}
+          >
+            {link.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <div class="hidden md:flex md:items-center">
+      <a href="/contact" class="metallic-gradient rounded-sm px-6 py-2.5 font-label text-sm font-semibold uppercase tracking-widest text-on-primary transition-all duration-500 hover:opacity-90">
+        Book Now
+      </a>
+    </div>
+
+    <details class="dropdown dropdown-end md:hidden">
+      <summary class="btn btn-ghost border border-outline-variant/30 bg-transparent px-3 py-2 text-on-surface hover:bg-surface-container-high">
+        Menu
+      </summary>
+      <ul class="menu dropdown-content z-[1] mt-3 w-56 rounded-sm border border-outline-variant/30 bg-surface-container p-2 text-on-surface shadow-lg">
+        {links.map((link) => (
+          <li>
+            <a href={link.href} class={pathname === link.href ? 'text-primary' : 'text-on-surface-variant'}>
+              {link.label}
+            </a>
+          </li>
+        ))}
+        <li><a href="/contact" class="font-semibold text-primary">Book Now</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
