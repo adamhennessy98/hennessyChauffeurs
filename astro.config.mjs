@@ -31,7 +31,7 @@ function sitemapSerialize(item) {
 export default defineConfig({
   site,
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({ imageService: true }),
   integrations: [
     sitemap({
       changefreq: 'weekly',
