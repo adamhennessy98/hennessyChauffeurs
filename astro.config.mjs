@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import vercel from '@astrojs/vercel';
 
-const site = 'https://hennessychauffeurs.ie';
+const site = 'https://hennessychauffeurs.com';
 
 // @ts-expect-error - SitemapItem from integration
 function sitemapSerialize(item) {

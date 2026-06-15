@@ -1,12 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const siteUrl = 'https://hennessychauffeurs.ie';
+import { SITE_URL } from '../config/site.ts';
+
+const siteUrl = SITE_URL;
 ---
 
 <BaseLayout
   title="Wedding & Event Chauffeur Leinster | Special Occasion Transport | Hennessy Chauffeurs"
   description="Luxury wedding car hire & special occasion chauffeur in Leinster from €100. Red carpet service, vehicle decorations & group bookings for your perfect day."
   breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'Special Occasions' }]}
+  ogImage="/images/og-occasions.webp"
 >
   <!-- Service JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({

@@ -2,8 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LandingNav from '../components/LandingNav.astro';
 import LandingFooter from '../components/LandingFooter.astro';
+import { SITE_URL } from '../config/site.ts';
 
-const siteUrl = 'https://hennessychauffeurs.ie';
+const siteUrl = SITE_URL;
 ---
 
 <BaseLayout
@@ -12,7 +13,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
   breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'Services' }]}
   showSiteChrome={false}
   bodyClass="bg-black text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container"
-  ogImage="/images/service-airport-terminal2.png"
+  ogImage="/images/og-services.webp"
 >
   <LandingNav />
 
@@ -35,7 +36,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
       <div class="mx-auto grid max-w-7xl gap-0 md:grid-cols-2 md:items-stretch">
         <div class="relative min-h-[320px] md:min-h-[480px]">
           <img
-            src="/images/service-airport-terminal2.png"
+            src="/images/service-airport-terminal2.webp"
             alt="Premium airport transfer — vehicle at terminal, evening light."
             class="absolute inset-0 h-full w-full object-cover"
             width="900"
@@ -108,7 +109,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
         </div>
         <div class="relative order-1 min-h-[320px] md:order-2 md:min-h-[480px]">
           <img
-            src="/images/service-executive-docklands.png"
+            src="/images/service-executive-docklands.webp"
             alt="Rear passenger perspective of a luxury vehicle interior with ambient lighting."
             class="absolute inset-0 h-full w-full object-cover"
             width="1200"
@@ -138,7 +139,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
             class="group relative min-h-[220px] overflow-hidden rounded-sm bg-[#111] md:col-span-8 md:row-span-1 md:min-h-0"
           >
             <img
-              src="/images/service-tours-countryside.png"
+              src="/images/service-tours-countryside.webp"
               alt="Coastal cliffs and Atlantic light — Wild Atlantic Way style scenery."
               class="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
               width="1200"
@@ -156,7 +157,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
             class="group relative min-h-[280px] overflow-hidden rounded-sm bg-[#111] md:col-span-4 md:row-span-2 md:min-h-0"
           >
             <img
-              src="/images/hero-mercedes.png"
+              src="/images/hero-mercedes.webp"
               alt="Elegant streetscape suggesting historic Dublin architecture."
               class="absolute inset-0 h-full w-full object-cover object-center opacity-85 transition-transform duration-700 group-hover:scale-105"
               width="1920"
@@ -174,7 +175,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
             class="group relative min-h-[200px] overflow-hidden rounded-sm bg-[#111] md:col-span-8 md:row-span-1 md:min-h-0"
           >
             <img
-              src="/luxury-chauffeur-service.png"
+              src="/luxury-chauffeur-service.webp"
               alt="Rolling green hills — Wicklow and countryside touring."
               class="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
               width="1200"

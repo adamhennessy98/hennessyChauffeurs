@@ -1,12 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const siteUrl = 'https://hennessychauffeurs.ie';
+import { SITE_URL } from '../config/site.ts';
+
+const siteUrl = SITE_URL;
 ---
 
 <BaseLayout
   title="Airport Transfers Leinster | Dublin Airport Chauffeur | Hennessy Chauffeurs"
   description="Reliable Dublin Airport & Cork Airport transfer service from €50. Flight tracking, meet & greet, luggage assistance. Book your Leinster airport chauffeur today."
   breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'Airport Transfers' }]}
+  ogImage="/images/og-airport.webp"
 >
   <!-- Service JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({

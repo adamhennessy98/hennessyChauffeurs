@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const prerender = false;
 
-const SITE_URL = 'https://hennessychauffeurs.ie';
+const SITE_URL = import.meta.env.SITE ?? 'https://hennessychauffeurs.com';
 
 function titleToSlug(title: string): string {
   return title

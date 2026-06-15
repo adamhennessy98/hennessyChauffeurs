@@ -2,8 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LandingNav from '../components/LandingNav.astro';
 import LandingFooter from '../components/LandingFooter.astro';
+import { SITE_URL, SITE_EMAIL } from '../config/site.ts';
 
-const siteUrl = 'https://hennessychauffeurs.ie';
+const siteUrl = SITE_URL;
 ---
 
 <BaseLayout
@@ -12,7 +13,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
   breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'Contact' }]}
   showSiteChrome={false}
   bodyClass="bg-black text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container"
-  ogImage="/contactMe.webp"
+  ogImage="/images/og-contact.webp"
 >
   <LandingNav />
 
@@ -117,7 +118,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
             <form action="https://formspree.io/f/xovpnnoj" method="POST" class="space-y-5">
               <input type="hidden" name="_subject" value="New booking request – Hennessy Chauffeurs" />
               <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
-              <input type="hidden" name="_next" value="https://hennessy-chauffeurs.vercel.app/thank-you" />
+              <input type="hidden" name="_next" value={`${siteUrl}/thank-you`} />
 
               <div class="grid gap-5 md:grid-cols-2">
                 <div class="md:col-span-1">

@@ -2,8 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LandingNav from '../components/LandingNav.astro';
 import LandingFooter from '../components/LandingFooter.astro';
+import { SITE_URL } from '../config/site.ts';
 
-const siteUrl = 'https://hennessychauffeurs.ie';
+const siteUrl = SITE_URL;
 ---
 
 <BaseLayout
@@ -12,7 +13,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
   breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'About' }]}
   showSiteChrome={false}
   bodyClass="bg-black text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container"
-  ogImage="/images/hero-mercedes.png"
+  ogImage="/images/og-about.webp"
 >
   <LandingNav />
 
@@ -20,7 +21,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
     <!-- Hero -->
     <header class="relative min-h-[88vh] w-full overflow-hidden">
       <img
-        src="/images/hero-mercedes.png"
+        src="/images/hero-mercedes.webp"
         alt="Black luxury Mercedes-Benz in evening city light."
         class="absolute inset-0 h-full w-full object-cover object-center"
         width="1920"
@@ -79,7 +80,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
         <div class="relative mx-auto w-full max-w-md md:max-w-none">
           <div class="aspect-[3/4] overflow-hidden rounded-sm border border-white/10 bg-[#111] md:aspect-[4/5]">
             <img
-              src="/aboutme.webp"
+              src="/images/headshot.webp"
               alt="Hennessy Chauffeurs — your professional chauffeur."
               class="h-full w-full object-cover object-top"
               width="800"
@@ -109,7 +110,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
         <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
           <div class="relative min-h-[260px] overflow-hidden rounded-sm md:min-h-[300px]">
             <img
-              src="/images/hero-mercedes.png"
+              src="/images/hero-mercedes.webp"
               alt="Mercedes-Benz executive saloon at night in the city."
               class="absolute inset-0 h-full w-full object-cover"
               width="1920"
@@ -137,7 +138,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
 
           <div class="relative min-h-[260px] overflow-hidden rounded-sm md:min-h-[300px]">
             <img
-              src="/images/service-executive-docklands.png"
+              src="/images/service-executive-docklands.webp"
               alt="Mercedes-Benz cabin — leather, wood trim, and ambient lighting."
               class="absolute inset-0 h-full w-full object-cover"
               width="1200"
@@ -200,7 +201,7 @@ const siteUrl = 'https://hennessychauffeurs.ie';
 
         <div class="relative aspect-square max-w-lg overflow-hidden rounded-sm border border-white/10 md:max-w-none">
           <img
-            src="/as-directed-service.png"
+            src="/as-directed-service.webp"
             alt="Chauffeur service — attention to detail and personal standards."
             class="h-full w-full object-cover"
             width="800"

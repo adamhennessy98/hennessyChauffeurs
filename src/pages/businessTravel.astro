@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_URL } from '../config/site.ts';
+
+const siteUrl = SITE_URL;
 ---
 
 <BaseLayout
   title="Executive Business Travel Chauffeur | Corporate Transport Leinster | Hennessy Chauffeurs"
   description="Professional executive chauffeur service in Leinster from €40/hour. Corporate accounts, luxury vehicles, WiFi & punctual service for business meetings & events."
-  breadcrumb={[{ name: 'Home', url: 'https://hennessychauffeurs.ie' }, { name: 'Business Travel' }]}
+  breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'Business Travel' }]}
+  ogImage="/images/og-business.webp"
 >
   <!-- Service JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -13,8 +17,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     "@type": "Service",
     "name": "Business Travel",
     "description": "Executive transportation for business meetings. Corporate accounts, luxury vehicles, WiFi and punctual service across Leinster, Ireland.",
-    "url": "https://hennessychauffeurs.ie/businessTravel",
-    "provider": { "@id": "https://hennessychauffeurs.ie" },
+    "url": `${siteUrl}/businessTravel`,
+    "provider": { "@id": siteUrl },
     "areaServed": { "@type": "Place", "name": "Leinster, Ireland" },
     "offers": {
       "@type": "Offer",

@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_URL } from '../config/site.ts';
 ---
 
 <BaseLayout
   title="Terms of Service | Hennessy Chauffeurs"
   description="Terms of service for Hennessy Chauffeurs. Booking conditions, cancellation policy and terms of use for our chauffeur services in Leinster, Ireland."
-  breadcrumb={[{ name: 'Home', url: 'https://hennessychauffeurs.ie' }, { name: 'Terms of Service' }]}
+  breadcrumb={[{ name: 'Home', url: SITE_URL }, { name: 'Terms of Service' }]}
+  ogImage="/images/og-default.webp"
 >
   <section class="max-w-4xl mx-auto px-4 py-16">
     <div class="text-center mb-12">

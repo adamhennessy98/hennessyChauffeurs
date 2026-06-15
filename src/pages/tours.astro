@@ -1,147 +1,210 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const siteUrl = 'https://hennessychauffeurs.ie';
+import LandingNav from '../components/LandingNav.astro';
+import LandingFooter from '../components/LandingFooter.astro';
+import { SITE_URL, SITE_EMAIL } from '../config/site.ts';
+import { tourValueProps, signatureTours, scenicImg } from '../data/tours.ts';
+
+const siteUrl = SITE_URL;
+
+function contactHref(tourId: string, intent: 'enquire' | 'book') {
+  const tour = signatureTours.find((t) => t.id === tourId);
+  const subject = encodeURIComponent(
+    intent === 'book' ? `Book: ${tour?.title ?? 'Private tour'}` : `Enquiry: ${tour?.title ?? 'Private tour'}`,
+  );
+  return `/contact?subject=${subject}`;
+}
 ---
 
 <BaseLayout
   title="Private Chauffeur Tours Ireland | Sightseeing & Day Trips | Hennessy Chauffeurs"
-  description="Explore Ireland with a private chauffeur. Wild Atlantic Way, Ancient Ireland & custom tours. Luxury sightseeing day trips from Leinster with Hennessy Chauffeurs."
+  description="Explore Ireland with a private chauffeur-driver guide. Wild Atlantic Way, heritage sites, Dublin & Wicklow, Northern Ireland, and bespoke ancestry tours — one dedicated driver for your whole journey."
   breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'Tours' }]}
+  showSiteChrome={false}
+  bodyClass="bg-background text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container"
+  ogImage="/images/og-tours.webp"
 >
-  <!-- Service JSON-LD -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Private Chauffeur Tours",
-    "description": "Private chauffeur tours of Ireland. Wild Atlantic Way, Ancient Ireland heritage tours, Dublin city tours and custom sightseeing day trips from Leinster.",
-    "url": `${siteUrl}/tours`,
-    "provider": { "@id": siteUrl },
-    "areaServed": { "@type": "Place", "name": "Leinster, Ireland" }
-  })} />
-  <!-- Hero Section with Background Image -->
-  <div class="w-full h-80 md:h-105 lg:h-126 overflow-hidden relative">
-    <img src="/countrySide.webp" alt="Irish countryside scenery on a chauffeur tour - Hennessy Chauffeurs" class="w-full h-full object-cover filter brightness-90 contrast-110 blur-sm" />
-    <div class="absolute inset-0 bg-navy/40" />
-    <div class="absolute inset-0 bg-gradient-to-b from-navy/20 via-transparent to-navy/30" />
-    
-    <!-- Hero Text Overlay -->
-    <div class="absolute inset-0 flex items-center justify-center">
-      <div class="text-center px-4 max-w-4xl mx-auto">
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-2xl tracking-wide">
-          Discover Ireland with Our Premium Tours
+  <LandingNav />
+
+  <article class="bg-black text-on-surface">
+    <!-- Hero -->
+    <header class="relative min-h-[88vh] w-full overflow-hidden">
+      <Image
+        src={scenicImg}
+        alt="Irish countryside and rolling hills — private chauffeur touring with Hennessy Chauffeurs."
+        class="absolute inset-0 h-full w-full object-cover object-center"
+        widths={[960, 1440, 1920]}
+        sizes="100vw"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-[#2D3047]/50" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/20" />
+
+      <div class="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-end px-6 pb-16 pt-32 md:px-8 md:pb-24 md:pt-36">
+        <p class="mb-4 font-label text-xs font-medium uppercase tracking-[0.35em] text-primary/90">
+          Private chauffeur tours
+        </p>
+        <h1 class="mb-8 max-w-4xl font-display text-4xl font-normal leading-[1.08] tracking-tight text-on-surface sm:text-5xl md:text-6xl lg:text-7xl">
+          Your Ireland, at your own pace.
         </h1>
-        <p class="text-lg md:text-xl text-mint leading-relaxed drop-shadow-lg">
-          Explore the breathtaking beauty and rich heritage of Ireland with Hennessy Chauffeurs' exclusive tour services. 
-          From the rolling green hills of the countryside to historic castles and vibrant cities, we offer carefully curated 
-          tours that showcase the very best of what Ireland has to offer.
+        <p class="max-w-2xl font-body text-base leading-relaxed text-on-surface-variant sm:text-lg">
+          One dedicated driver-guide for your entire journey — learning your interests, setting the rhythm, and sharing the Ireland only a local knows. Discreet, unhurried, and entirely yours.
         </p>
       </div>
-    </div>
-  </div>
+    </header>
 
-  <!-- Tours Page Content -->
-  <section class="max-w-4xl mx-auto px-4 py-16">
-    <div class="space-y-8">
-      <!-- Tour 1: Wild Atlantic Way -->
-      <div class="bg-mint/30 border border-lavender/30 rounded-lg p-8 hover:shadow-lg hover:border-lavender/50 transition-all duration-300">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold text-navy mb-3 tracking-wide">Wild Atlantic Way Coastal Tour</h2>
-            <p class="text-navy/80 mb-4">
-              Experience Ireland's dramatic western coastline with stunning cliffs, pristine beaches, and charming coastal villages. 
-              This full-day tour includes stops at the Cliffs of Moher, Dingle Peninsula, and traditional Irish fishing villages.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-teal/20 text-teal px-3 py-1 rounded-full text-sm">8-10 hours</span>
-              <span class="bg-gold/20 text-navy px-3 py-1 rounded-full text-sm">Scenic Routes</span>
-              <span class="bg-lavender/30 text-navy px-3 py-1 rounded-full text-sm">Photo Stops</span>
-            </div>
-          </div>
-          <div class="mt-4 md:mt-0 md:ml-8 flex flex-col gap-3">
-            <a href="/contact" class="border-2 border-teal text-teal font-medium px-8 py-2 rounded-lg hover:bg-mint transition-colors duration-200 text-center">
-              More Info
-            </a>
-            <a href="/contact" class="bg-gold text-navy font-medium px-8 py-3 rounded-lg hover:bg-gold/90 transition-colors duration-200 text-center">
-              Book This Tour
-            </a>
-          </div>
-        </div>
-      </div>
+    <!-- Service JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Private Chauffeur Tours',
+      description: 'Private chauffeur tours of Ireland with one dedicated driver-guide. Wild Atlantic Way, heritage, Dublin, Northern Ireland, ancestry, and custom itineraries.',
+      url: `${siteUrl}/tours`,
+      provider: { '@id': siteUrl },
+      areaServed: { '@type': 'Place', name: 'Ireland' },
+    })} />
 
-      <!-- Tour 2: Ancient Ireland -->
-      <div class="bg-mint/30 border border-lavender/30 rounded-lg p-8 hover:shadow-lg hover:border-lavender/50 transition-all duration-300">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold text-navy mb-3 tracking-wide">Ancient Ireland Heritage Tour</h2>
-            <p class="text-navy/80 mb-4">
-              Journey through Ireland's rich history with visits to ancient castles, megalithic tombs, and medieval monasteries. 
-              Discover Newgrange, Kilkenny Castle, and the Rock of Cashel with expert commentary on Irish heritage.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-teal/20 text-teal px-3 py-1 rounded-full text-sm">6-8 hours</span>
-              <span class="bg-gold/20 text-navy px-3 py-1 rounded-full text-sm">Historical Sites</span>
-              <span class="bg-lavender/30 text-navy px-3 py-1 rounded-full text-sm">Castle Visits</span>
-            </div>
-          </div>
-          <div class="mt-4 md:mt-0 md:ml-8 flex flex-col gap-3">
-            <a href="/contact" class="border-2 border-teal text-teal font-medium px-8 py-2 rounded-lg hover:bg-mint transition-colors duration-200 text-center">
-              More Info
-            </a>
-            <a href="/contact" class="bg-gold text-navy font-medium px-8 py-3 rounded-lg hover:bg-gold/90 transition-colors duration-200 text-center">
-              Book This Tour
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tour 3: Dublin Highlights -->
-      <div class="bg-mint/30 border border-lavender/30 rounded-lg p-8 hover:shadow-lg hover:border-lavender/50 transition-all duration-300">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold text-navy mb-3 tracking-wide">Dublin City & Surroundings Tour</h2>
-            <p class="text-navy/80 mb-4">
-              Explore Ireland's vibrant capital and its beautiful surroundings. Visit Trinity College, Dublin Castle, 
-              Temple Bar, and venture to the scenic Wicklow Mountains known as the "Garden of Ireland."
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-teal/20 text-teal px-3 py-1 rounded-full text-sm">5-7 hours</span>
-              <span class="bg-gold/20 text-navy px-3 py-1 rounded-full text-sm">City Highlights</span>
-              <span class="bg-lavender/30 text-navy px-3 py-1 rounded-full text-sm">Mountain Views</span>
-            </div>
-          </div>
-          <div class="mt-4 md:mt-0 md:ml-8 flex flex-col gap-3">
-            <a href="/contact" class="border-2 border-teal text-teal font-medium px-8 py-2 rounded-lg hover:bg-mint transition-colors duration-200 text-center">
-              More Info
-            </a>
-            <a href="/contact" class="bg-gold text-navy font-medium px-8 py-3 rounded-lg hover:bg-gold/90 transition-colors duration-200 text-center">
-              Book This Tour
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Custom Tour Option -->
-      <div class="bg-mint/20 border-2 border-dashed border-lavender rounded-lg p-8 hover:border-gold/50 transition-all duration-300">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-6">
-            <span class="text-gold text-2xl">✨</span>
-          </div>
-          <h2 class="text-2xl font-bold text-navy mb-4 tracking-wide">Create Your Custom Tour</h2>
-          <p class="text-navy/80 mb-6 max-w-2xl mx-auto">
-            Have specific places you'd like to visit? Want to explore your family heritage or follow a particular interest? 
-            Let us design a completely personalized tour experience just for you. Share your ideas with us and we'll create 
-            an itinerary that perfectly matches your preferences, schedule, and budget.
+    <!-- Why a private chauffeur tour -->
+    <section class="border-t border-white/5 bg-surface-container-low py-20 md:py-28" aria-labelledby="why-tours-heading">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <header class="mx-auto mb-14 max-w-3xl text-center md:mb-16">
+          <p class="mb-3 font-label text-xs font-medium uppercase tracking-[0.35em] text-on-surface-variant">
+            Why travel this way
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:info@hennessychauffeurs.ie?subject=Custom Tour Request" class="bg-gold text-navy font-medium px-8 py-3 rounded-lg hover:bg-gold/90 transition-colors duration-200">
-              Email Tour Request
-            </a>
-            <a href="/contact" class="border-2 border-teal text-teal font-medium px-8 py-3 rounded-lg hover:bg-mint transition-colors duration-200">
-              Contact Us
-            </a>
-          </div>
+          <h2 id="why-tours-heading" class="mb-5 font-display text-3xl font-normal tracking-tight text-on-surface md:text-4xl lg:text-5xl">
+            Why a private chauffeur tour
+          </h2>
+          <p class="font-body leading-relaxed text-on-surface-variant">
+            A tour should feel like an invitation, not a timetable. These are the reasons our guests choose a single chauffeur over a coach or rental car.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {tourValueProps.map((item) => (
+            <article class="rounded-sm border border-white/10 bg-[#111] p-8">
+              <span class="material-symbols-outlined text-4xl text-primary" aria-hidden="true">{item.icon}</span>
+              <h3 class="mb-4 mt-5 font-display text-xl leading-snug text-on-surface">{item.title}</h3>
+              <p class="text-sm leading-relaxed text-on-surface-variant">{item.description}</p>
+            </article>
+          ))}
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Signature tours -->
+    <section class="border-t border-white/5 px-6 py-20 md:px-8 md:py-28" aria-labelledby="signature-tours-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto mb-14 max-w-3xl text-center md:mb-16">
+          <p class="mb-3 font-label text-xs font-medium uppercase tracking-[0.35em] text-on-surface-variant">
+            Curated starting points
+          </p>
+          <h2 id="signature-tours-heading" class="mb-5 font-display text-3xl font-normal tracking-tight text-on-surface md:text-4xl lg:text-5xl">
+            Signature tours
+          </h2>
+          <p class="font-body leading-relaxed text-on-surface-variant">
+            Every route below is a template — we refine timing, stops, and pace around you. No fixed departures, no shared groups.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {signatureTours.map((tour) => (
+            <article class="flex flex-col overflow-hidden rounded-sm border border-white/10 bg-[#0f0f0f]">
+              <div class="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src={tour.image}
+                  alt={tour.imageAlt}
+                  class="h-full w-full object-cover"
+                  widths={[400, 640, 800]}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+
+              <div class="flex flex-1 flex-col p-6 md:p-7">
+                <h3 class="mb-3 font-display text-xl text-on-surface md:text-2xl">{tour.title}</h3>
+                <p class="mb-5 flex-1 text-sm leading-relaxed text-on-surface-variant">{tour.description}</p>
+
+                <div class="mb-6 flex flex-wrap gap-2">
+                  <span class="rounded-sm border border-white/10 bg-[#141414] px-3 py-1 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+                    {tour.duration}
+                  </span>
+                  <span class="rounded-sm border border-primary/20 bg-primary/10 px-3 py-1 font-label text-xs uppercase tracking-wider text-primary">
+                    {tour.type}
+                  </span>
+                </div>
+
+                <div class="flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={contactHref(tour.id, 'enquire')}
+                    class="inline-flex flex-1 items-center justify-center rounded-sm border border-on-surface-variant/40 px-4 py-3 font-label text-xs font-semibold uppercase tracking-[0.12em] text-on-surface transition-colors hover:border-on-surface hover:bg-white/5"
+                  >
+                    Enquire
+                  </a>
+                  <a
+                    href={contactHref(tour.id, 'book')}
+                    class="metallic-gradient inline-flex flex-1 items-center justify-center rounded-sm px-4 py-3 font-label text-xs font-semibold uppercase tracking-[0.12em] text-on-primary transition-opacity hover:opacity-90"
+                  >
+                    Book this tour
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Multi-day touring -->
+    <section class="border-t border-white/5 bg-[#2D3047]/30" aria-labelledby="multi-day-heading">
+      <div class="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 py-14 md:flex-row md:items-center md:gap-10 md:px-8 md:py-16">
+        <span class="material-symbols-outlined shrink-0 text-4xl text-primary" aria-hidden="true">calendar_month</span>
+        <div class="flex-1">
+          <h2 id="multi-day-heading" class="mb-3 font-display text-2xl text-on-surface md:text-3xl">
+            Multi-day touring
+          </h2>
+          <p class="max-w-3xl font-body leading-relaxed text-on-surface-variant">
+            Bespoke two-day to multi-day itineraries are available on request — the same dedicated chauffeur throughout, with accommodation recommendations arranged to suit your style and budget. Tell us how long you have, and we will map the rest.
+          </p>
+        </div>
+        <a
+          href="/contact?subject=Multi-day%20tour%20enquiry"
+          class="shrink-0 rounded-sm border border-on-surface-variant/40 px-6 py-3.5 font-label text-sm font-semibold uppercase tracking-[0.15em] text-on-surface transition-colors hover:border-on-surface hover:bg-white/5"
+        >
+          Discuss multi-day
+        </a>
+      </div>
+    </section>
+
+    <!-- Custom tour CTA -->
+    <section class="border-t border-white/5 px-6 py-20 md:px-8 md:py-28" aria-labelledby="custom-tour-heading">
+      <div class="mx-auto max-w-4xl rounded-sm border border-dashed border-white/15 bg-[#0a0a0a] px-8 py-14 text-center md:px-12 md:py-16">
+        <span class="material-symbols-outlined mb-6 text-5xl text-primary" aria-hidden="true">route</span>
+        <h2 id="custom-tour-heading" class="mb-5 font-display text-3xl font-normal tracking-tight text-on-surface md:text-4xl">
+          Design your own itinerary
+        </h2>
+        <p class="mx-auto mb-10 max-w-2xl font-body leading-relaxed text-on-surface-variant">
+          Have specific places in mind, family records to follow, or another passion — gardens, literature, whiskey, and more? Share your ideas and we will craft a completely personal route with no fixed template and no strangers in the car.
+        </p>
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
+          <a
+            href={`mailto:${SITE_EMAIL}?subject=Custom%20tour%20request`}
+            class="metallic-gradient w-full rounded-sm px-8 py-4 font-label text-sm font-semibold uppercase tracking-[0.12em] text-on-primary transition-opacity hover:opacity-90 sm:w-auto sm:min-w-[240px]"
+          >
+            Email tour request
+          </a>
+          <a
+            href="/contact?subject=Custom%20tour%20itinerary"
+            class="w-full rounded-sm border border-on-surface-variant/40 px-8 py-4 font-label text-sm font-semibold uppercase tracking-[0.12em] text-on-surface transition-colors hover:border-on-surface hover:bg-white/5 sm:w-auto sm:min-w-[240px]"
+          >
+            Start on the contact form
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <LandingFooter />
 </BaseLayout>

@@ -4,8 +4,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import LandingNav from '../../components/LandingNav.astro';
 import LandingFooter from '../../components/LandingFooter.astro';
 import { getCollection } from 'astro:content';
+import { SITE_URL } from '../../config/site.ts';
 
-const siteUrl = 'https://hennessychauffeurs.ie';
+const siteUrl = SITE_URL;
 
 const allPosts = await getCollection('posts');
 const posts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -17,7 +18,7 @@ const posts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.
   breadcrumb={[{ name: 'Home', url: siteUrl }, { name: 'Blog' }]}
   showSiteChrome={false}
   bodyClass="bg-black text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container"
-  ogImage="/images/hero-mercedes.png"
+  ogImage="/images/og-blog.webp"
 >
   <LandingNav />
 
